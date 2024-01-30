@@ -11,7 +11,7 @@
     <script>
       var w
       function startWorker(){
-        if(w== 'undefined') w= new Worker('demo-workers.js')
+        if(w== undefined) w= new Worker('demo-workers.js')
         w.onmessage= function (event){
           document.getElementById('result').innerHTML = event.data
         }
