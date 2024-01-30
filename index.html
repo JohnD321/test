@@ -11,13 +11,13 @@
     <script>
       var w
       function startWorker(){
-        if(w== undefined) w= new Worker('demo-workers.js')
+        w|= new Worker('demo-workers.js')
         w.onmessage= function (event){
           document.getElementById('result').innerHTML = event.data
         }
       }
       function stopWorker(){
-        w.terminate()
+        if(w) w.terminate()
         w= undefined
       }
     </script>
