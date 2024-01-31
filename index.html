@@ -12,7 +12,7 @@
     <script>document.getElementById('result').innerHTML=0
       var w
       function startWorker(){
-        w|= new Worker('demoworkers.js')
+        w||= new Worker('demoworkers.js')
         //if (!w) w= new Worker('demoworkers.js')
         w.onmessage= function (event){
           document.getElementById('result').innerHTML = event.data
