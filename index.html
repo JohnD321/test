@@ -11,7 +11,7 @@
     <button onclick= 'startWorker()'>Start Worker</button>
     <button onclick= 'stopWorker()'>Stop Worker</button>
 
-    <script>
+    <script>document.getElementById('result').innerHTML=0
       var w
       function startWorker(){
         w|= new Worker('demoworkers.js')
